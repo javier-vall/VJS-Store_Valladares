@@ -1,16 +1,21 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>VJS Store</h1>
-        <p>Venta de Equipamiento Deportivo</p>
-      </header>
-    </div>
-  );
+//componente
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
+import UserPanel from "./components/UserPanel";
+import ItemListContainer from "./components/ItemListContainer";
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <UserPanel />
+        <Header />
+        <NavBar />
+        <ItemListContainer subtitle={"Bienvenidos!!"} />
+      </div>
+    );
+  }
 }
 
 export default App;
